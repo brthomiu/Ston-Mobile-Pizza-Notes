@@ -4,5 +4,6 @@ Containerized mobile app dev environment, builds docker containers for express b
 Don't forget to change the POSTGRES_PASSWORD on line 28.
 
 cp docker-compose_EXAMPLE.yml docker-compose.yml
+
 docker-compose up --build
 
