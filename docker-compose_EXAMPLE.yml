@@ -1,7 +1,6 @@
-version: '3'
+version: "3"
 
 services:
-
   # Create frontend container
   frontend: # Name of our service
     build: ./frontend # path to dockerfile
@@ -10,23 +9,23 @@ services:
     container_name: frontend-docker
     restart: always # What to do if container crashes
     links:
-      - backend  # Create backend container
+      - backend # Create backend container
 
   backend:
-    # Create backend container  
+    # Create backend container
     build: ./backend
     ports:
       - "8080:8080"
     container_name: backend-docker
     restart: always
     links:
-      - db  # Create database container
+      - db # Create database container
 
   db:
     image: postgres:14.5-alpine
     environment:
-      - POSTGRES_PASSWORD=password_goes_here
+      - POSTGRES_PASSWORD=password_goes_here # Postgres Password
     ports:
-    - "5432:5432"
+      - "5432:5432"
     container_name: database-docker
     restart: always
