@@ -1,46 +1,55 @@
 import { StyleSheet } from "react-native";
 
-const color_bg = "#bcc";
-const color_text = "#fff";
+const color_bg = "#bcb5b3";
+const color_white = "#f8f8f8";
+const color_dark = "#434345";
+const color_text = "#231f20";
 const color_primary = "#abf";
 
 export const loginStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: color_bg,
-    alignItems: "center"
+    alignItems: "center",
   },
   input: {
-    width: '75%',
-    backgroundColor: color_text,
+    width: "75%",
+    backgroundColor: color_white,
     alignItems: "center",
-    padding: '3%',
-    borderRadius: '10%',
-    margin: '2%',
-    top: '15%'
-    
+    padding: "3%",
+    borderRadius: "10%",
+    margin: "2%",
+    top: "12%",
   },
 
-  buttonContainer:{
-    top: '20%',
-    display: 'flex',
-    flexDirection: 'row',
-    padding: '10%',
+  buttonContainer: {
+    top: "15%",
+    display: "flex",
+    flexDirection: "row",
+    padding: "10%",
   },
   button: {
-    backgroundColor: color_primary,
-    padding: '5%',
-    borderRadius: '10%',
-    margin: '5%'
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: "10%",
+    margin: "5%",
   },
   logo: {
-    width: '75%',
-    height: '15%',
-    top: '8%'
+    width: "82%",
+    height: "18%",
+    top: "8%",
   },
   text: {
     color: color_text,
   },
+  buttonText: {
+    color: color_white,
+  },
+  terms: {
+    flexDirection: 'row',
+    margin: '5%',
+    justifyContent: "space-between"
+  }
 });
 
 export const headerStyles = StyleSheet.create({
@@ -55,5 +64,28 @@ export const headerStyles = StyleSheet.create({
     color: color_text,
     fontSize: 25,
     textAlign: "center",
+  },
+});
+
+export const termsStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: color_bg,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  button: {
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: "10%",
+    margin: "5%",
+  },
+  text: {
+    color: color_text,
+    fontSize: 25,
+    textAlign: "center",
+  },
+  buttonText: {
+    color: color_white,
   },
 });
