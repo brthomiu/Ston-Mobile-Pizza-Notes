@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Logo from "../assets/cookBookLogo.png";
+import SocialLogin from "./SocialLogin";
 
 export default function Login({ navigation }) {
   return (
@@ -45,16 +46,7 @@ export default function Login({ navigation }) {
             Reset Password
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={loginStyles.loginButton}
-          disabled={!request}
-          title="Login"
-          onPress={() => {
-            promptAsync();
-          }}
-        >
-          <Text style={loginStyles.buttonText}>Login With Google</Text>
-        </TouchableOpacity>
+        <SocialLogin />
       </View>
       <StatusBar style="auto" />
     </View>

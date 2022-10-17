@@ -3,6 +3,7 @@
     "name": "frontend",
     "slug": "frontend",
     "version": "1.0.0",
+    "scheme": "com.brthomiu.frontend",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,16 +17,19 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
+      "package": "com.brthomiu.frontend",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.brthomiu.frontend",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "package": "com.brthomiu.frontend"
     }
   }
 }
