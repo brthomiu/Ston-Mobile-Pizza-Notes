@@ -26,13 +26,24 @@ export const loginStyles = StyleSheet.create({
     top: "15%",
     display: "flex",
     flexDirection: "row",
-    padding: "10%",
+      
+  },
+  loginButton: {
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: "10%",
+    margin: "5%",
+    width: '75%',
+    alignContent: 'center',
+    top: '10%'
   },
   button: {
     backgroundColor: color_dark,
     padding: "5%",
     borderRadius: "10%",
     margin: "5%",
+    width: '75%',
+    alignContent: 'center',
   },
   logo: {
     width: "82%",
@@ -47,8 +58,12 @@ export const loginStyles = StyleSheet.create({
   },
   terms: {
     flexDirection: 'row',
-    margin: '5%',
-    justifyContent: "space-between"
+    margin: '10%'
+  },
+  textButtons: {
+
+    margin: '10%',
+    flexDirection: 'row'
   }
 });
 

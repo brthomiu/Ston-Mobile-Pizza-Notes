@@ -26,15 +26,34 @@ export default function Login({ navigation }) {
           secureTextEntry={true}
         />
       </View>
-      <View style={loginStyles.buttonContainer}>
-        <TouchableOpacity style={loginStyles.button} onPress={onPress}>
-          <Text style={loginStyles.buttonText}>Login</Text>
+
+      <TouchableOpacity style={loginStyles.loginButton} onPress={onPress}>
+        <Text style={loginStyles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      <View>
+        <TouchableOpacity style={loginStyles.textButtons}>
+          <Text
+            style={loginStyles.textButtons}
+            onPress={() => navigation.navigate("NewUser")}
+          >
+            New User
+          </Text>
+          <Text
+            style={loginStyles.textButtons}
+            onPress={() => navigation.navigate("NewUser")}
+          >
+            Reset Password
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={loginStyles.button}
-          onPress={() => navigation.navigate("NewUser")}
+          style={loginStyles.loginButton}
+          disabled={!request}
+          title="Login"
+          onPress={() => {
+            promptAsync();
+          }}
         >
-          <Text style={loginStyles.buttonText}>New User</Text>
+          <Text style={loginStyles.buttonText}>Login With Google</Text>
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
