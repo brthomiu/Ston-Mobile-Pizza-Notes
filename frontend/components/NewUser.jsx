@@ -2,10 +2,13 @@ import React from "react";
 import { loginStyles } from "./styles";
 import { Text, View, TextInput, TouchableOpacity, onPress } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import Header from "./Header";
 
 export default function NewUser({ navigation }) {
   return (
     <View style={loginStyles.container}>
+      <Header />
+      <Text style={loginStyles.newUserText}>New Account</Text>
       <View style={loginStyles.input}>
         <TextInput placeholder="Email" style={loginStyles.loginText} />
       </View>
@@ -27,7 +30,7 @@ export default function NewUser({ navigation }) {
         />
       </View>
       <View style={loginStyles.buttonContainer}>
-        <TouchableOpacity style={loginStyles.button} onPress={onPress}>
+        <TouchableOpacity style={loginStyles.createButton} onPress={() => navigation.navigate("HomePage")}>
           <Text style={loginStyles.buttonText}>Create Account</Text>
         </TouchableOpacity>
       </View>
@@ -40,7 +43,14 @@ export default function NewUser({ navigation }) {
         <TouchableOpacity style={loginStyles.terms} onPress={() => navigation.navigate("PrivacyPolicy")}>
           <Text>Privacy Policy</Text>
         </TouchableOpacity>
+        
       </View>
+   
+        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+          <Text style={loginStyles.textButtons2}>Return to Login</Text>
+        </TouchableOpacity>
+      
+
 
       <StatusBar style="auto" />
     </View>

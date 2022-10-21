@@ -11,10 +11,12 @@ import {
 import { StatusBar } from "expo-status-bar";
 import Logo from "../assets/cookBookLogo.png";
 import SocialLogin from "./SocialLogin";
+import Header from "./Header";
 
 export default function Login({ navigation }) {
   return (
     <View style={loginStyles.container}>
+      <Header />
       <Image source={Logo} style={loginStyles.logo} />
 
       <View style={loginStyles.input}>
@@ -28,11 +30,11 @@ export default function Login({ navigation }) {
         />
       </View>
 
-      <TouchableOpacity style={loginStyles.loginButton} onPress={onPress}>
+      <TouchableOpacity style={loginStyles.loginButton} onPress={() => navigation.navigate("HomePage")}>
         <Text style={loginStyles.buttonText}>Login</Text>
       </TouchableOpacity>
       <View>
-        <TouchableOpacity style={loginStyles.textButtons}>
+        <View style={loginStyles.textButtons}>
           <Text
             style={loginStyles.textButtons}
             onPress={() => navigation.navigate("NewUser")}
@@ -41,14 +43,15 @@ export default function Login({ navigation }) {
           </Text>
           <Text
             style={loginStyles.textButtons}
-            onPress={() => navigation.navigate("NewUser")}
+            onPress={() => navigation.navigate("ResetPassword")}
           >
             Reset Password
           </Text>
-        </TouchableOpacity>
+        </View>
         <SocialLogin />
+
       </View>
-      <StatusBar style="auto" />
+      <StatusBar style="hidden" />
     </View>
   );
 }

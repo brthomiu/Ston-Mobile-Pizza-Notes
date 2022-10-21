@@ -22,6 +22,7 @@
     },
     "android": {
       "package": "com.brthomiu.frontend",
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

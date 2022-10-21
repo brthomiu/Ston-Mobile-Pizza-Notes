@@ -17,16 +17,33 @@ export const loginStyles = StyleSheet.create({
   input: {
     width: "75%",
     backgroundColor: color_white,
+    borderRadius: 8,
+    margin: "2%",
+    top: "5%",
+    resizeMode: "contain",
+  },
+
+  resetInput: {
+    width: "75%",
+    backgroundColor: color_white,
     alignItems: "center",
     padding: "5%",
     borderRadius: 8,
     margin: "2%",
-    top: "12%",
+    top: "28%",
     resizeMode: "contain",
   },
 
+  resetText: {
+    top: "25%",
+    fontSize: 20,
+  },
+  newUserText: {
+    fontSize: 20,
+    top: "3%"
+  },
   buttonContainer: {
-    top: "15%",
+    top: "50%",
     display: "flex",
     flexDirection: "row",
   },
@@ -37,9 +54,19 @@ export const loginStyles = StyleSheet.create({
     margin: "5%",
     width: "75%",
     alignContent: "center",
-    top: "10%",
+    top: "5%",
   },
   button: {
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: 8,
+    margin: "5%",
+    width: "75%",
+    alignContent: "center",
+  },
+  createButton: {
+    position: "relative",
+    top: "-35%",
     backgroundColor: color_dark,
     padding: "5%",
     borderRadius: 8,
@@ -59,7 +86,8 @@ export const loginStyles = StyleSheet.create({
   logo: {
     width: "82%",
     height: "18%",
-    top: "8%",
+    top: "4%",
+    marginBottom: "5%",
     resizeMode: "contain",
   },
   text: {
@@ -74,10 +102,15 @@ export const loginStyles = StyleSheet.create({
     margin: "10%",
   },
   textButtons: {
-    marginHorizontal: "10%",
-    marginTop: "10%",
+    padding: "3%",
+    marginHorizontal: "7%",
+    marginTop: "5%",
     marginBottom: "5%",
     flexDirection: "row",
+  },
+  textButtons2: {
+    padding: "3%",
+    color: color_text
   },
   googleIcon: {
     marginRight: "7%",
@@ -86,37 +119,82 @@ export const loginStyles = StyleSheet.create({
     color: color_text,
     alignSelf: "center",
   },
+  loginText: {
+    padding: "6%",
+  }
 });
 
-export const headerStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: color_primary,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  text: {
-    color: color_text,
-    fontSize: 25,
-    textAlign: "center",
-  },
-});
-
-export const termsStyles = StyleSheet.create({
+export const homeStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: color_bg,
     alignItems: "center",
-    justifyContent: "center",
+    resizeMode: "contain",
+  },
+  buttonContainer: {
+    top: "50%",
+    display: "flex",
+    flexDirection: "row",
+  },
+  loginButton: {
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: 8,
+    margin: "5%",
+    width: "75%",
+    alignContent: "center",
+    top: "8%",
   },
   button: {
     backgroundColor: color_dark,
     padding: "5%",
     borderRadius: 8,
     margin: "5%",
+    width: "75%",
+    alignContent: "center",
+  },
+  buttonText: {
+    color: color_white,
+    alignSelf: "center",
+  },
+  textButtons: {
+    top: "1700%",
+  }
+});
+
+export const headerStyles = StyleSheet.create({
+  container: {
+    width: "100%",
+    backgroundColor: color_white,
+    alignItems: "center",
+    justifyContent: "space-between",
+    height: "6%",
+  },
+
+  text: {
+    color: color_white,
+    fontSize: 25,
+    textAlign: "center",
+  },
+});
+
+
+export const termsStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: color_bg,
+    alignItems: "center",
+    resizeMode: "contain",
+  },
+  button: {
+    top: "25%",
+    backgroundColor: color_dark,
+    padding: "5%",
+    borderRadius: 8,
+    margin: "5%",
   },
   text: {
+    top: "10%",
     color: color_text,
     fontSize: 25,
     textAlign: "center",
