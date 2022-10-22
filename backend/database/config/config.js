@@ -1,32 +1,41 @@
-const { Sequelize } = require('sequelize');
-const dotenv = require("dotenv").config();
-require("dotenv").config();
-
-const sequelize = new Sequelize(process.env.DATABASE_URL) // Example for postgres
+const dotenv = require("dotenv").config({ path: "../../../.env" });
 
 module.exports = {
   development: {
     url: process.env.DATABASE_URL,
-    dialect: 'postgres',
-    username: 'postgres',
-    password: process.env.DATABASE_PASSWORD,
-    host: 'localhost',
+    dialect: "postgres",
   },
   test: {
     url: process.env.DATABASE_URL,
-    dialect: 'postgres',
-    username: 'postgres',
-    password: process.env.DATABASE_PASSWORD,
-    host: 'localhost',
+    dialect: "postgres",
   },
   production: {
     url: process.env.DATABASE_URL,
-    dialect: 'postgres',
-    username: 'postgres',
-    password: process.env.DATABASE_PASSWORD,
-    host: 'localhost',
+    dialect: "postgres",
   },
-    seederStorage: 'sequelize'
+};
 
-
+/*module.exports = {
+  "development": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": process.env.DATABASE_HOST,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": process.env.DATABASE_HOST,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": process.env.DATABASE_USERNAME,
+    "password": process.env.DATABASE_PASSWORD,
+    "database": process.env.DATABASE_NAME,
+    "host": process.env.DATABASE_HOST,
+    "dialect": "postgres"
+  }
 }
+*/
