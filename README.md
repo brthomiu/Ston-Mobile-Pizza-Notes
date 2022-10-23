@@ -9,7 +9,7 @@ Stön (stəʊn) is a platform built to help home cooks and chefs develop better 
 
 ## Tech Stack
 
-Cook.Book is a mobile app built on a PERN stack with React Native and Expo.
+Stön is a mobile app built on a PERN stack with React Native and Expo.
 
 ## Backend
 
