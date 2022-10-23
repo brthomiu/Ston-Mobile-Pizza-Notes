@@ -1,32 +1,15 @@
-# Cook.Book
-### Mobile recipe tracking application.
+# Stön
+### Mobile application for pizza chefs.
 
-Cook.Book is a platform built to help home cooks and chefs develop better recipes.
+Stön (stəʊn) is a platform built to help home cooks and chefs develop better pizzas.
 
 ## Concept
 
-Select the dish for a recipe.
-
-Name and describe the recipe.
-
-Create a goal for the recipe and add tags to the goal.
-
-Select the ingredients and methods being used to create the recipe.
-
-Set the parameters for every ingredient and method.
-
-Tag ingredients and methods.
-
-Update goal after cooking to add notes and declare recipe success/failure.
-
-All recipe data is saved into a relational database.
-
-Compare recipes and results with scientific precision.
+<img src="/frontend/assets/stonInfo.png" alt="Ston Pizza Tracker App">
 
 ## Tech Stack
 
 Cook.Book is a mobile app built on a PERN stack with React Native and Expo.
-It also features Sequelize as an ORM, Oauth2 authentication, and Redux Toolkit state management.
 
 ## Backend
 

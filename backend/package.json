@@ -14,7 +14,8 @@
     "sequelize-cli": "^6.5.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
