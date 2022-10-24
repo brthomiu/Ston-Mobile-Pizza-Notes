@@ -9,13 +9,12 @@ Stön (stəʊn) is a platform built to help home cooks and chefs develop better 
 
 ## Tech Stack
 
-Stön is a mobile app built on a PERN stack with React Native and Expo.
+Stön is a mobile application built with React Native, Express API, NodeJS, and PostgresQL
 
 ## Backend
 
-Backend built with Node and Express API.
-PostgreSQL database contains tables of dishes, ingredients, and methods that are used to build recipes.
-Recipe objects from the user's state are modelled and mapped to recipes table in SQL with Sequelize ORM.
+The server uses a NodeJS server with Express API, and connects to a PostgreSQL database.
+Recipes are stored in the database, recipe data can be tracked down to each individual variable.
 
 ## Frontend
 
