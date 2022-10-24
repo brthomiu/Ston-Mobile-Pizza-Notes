@@ -9,7 +9,7 @@ Stön (stəʊn) is a platform built to help home cooks and chefs develop better 
 
 ## Tech Stack
 
-Stön is a mobile application built with React Native, Express API, NodeJS, and PostgresQL
+Stön is a mobile application written in JavaScript using React Native, Express API, NodeJS, and PostgreSQL.
 
 ## Backend
 
