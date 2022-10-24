@@ -2,7 +2,6 @@
 ### Mobile application for pizza chefs.
 
 Stön (stəʊn) is a platform built to help home cooks and chefs develop better pizzas.
-Stön is currently in the pre-deployment stage of development.
 
 ## Concept
 
