@@ -6,18 +6,33 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  onPress,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Logo from "../assets/cookBookLogo.png";
+import Logo from "../assets/stonBook.png";
+import Background from "../assets/loginBG.png";
 import SocialLogin from "./SocialLogin";
 import Header from "./Header";
 
 export default function Login({ navigation }) {
   return (
     <View style={loginStyles.container}>
+      
+      {/* Background Image */}
+      <View style={loginStyles.background}>
+        
+      <Image source={Background} style={loginStyles.backgroundImage}/>
+
+      </View>
+      {/* Top Header */}
+
       <Header />
+      
+      {/* Logo Image */}
+
       <Image source={Logo} style={loginStyles.logo} />
+      
+
+      {/* Email and Password Input */}
 
       <View style={loginStyles.input}>
         <TextInput placeholder="Email" style={loginStyles.loginText} />
@@ -30,7 +45,12 @@ export default function Login({ navigation }) {
         />
       </View>
 
-      <TouchableOpacity style={loginStyles.loginButton} onPress={() => navigation.navigate("HomePage")}>
+      {/* Login/New User/Reset Password Buttons */}
+
+      <TouchableOpacity
+        style={loginStyles.loginButton}
+        onPress={() => navigation.navigate("HomePage")}
+      >
         <Text style={loginStyles.buttonText}>Login</Text>
       </TouchableOpacity>
       <View>
@@ -48,9 +68,12 @@ export default function Login({ navigation }) {
             Reset Password
           </Text>
         </View>
-        <SocialLogin />
 
+        {/* Login with Google button component */}
+
+        <SocialLogin />
       </View>
+
       <StatusBar style="hidden" />
     </View>
   );

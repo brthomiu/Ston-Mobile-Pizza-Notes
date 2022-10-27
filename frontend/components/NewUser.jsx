@@ -1,12 +1,17 @@
 import React from "react";
 import { loginStyles } from "./styles";
-import { Text, View, TextInput, TouchableOpacity, onPress } from "react-native";
+import { Image, Text, View, TextInput, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Header from "./Header";
+import Background from "../assets/loginBG.png";
 
 export default function NewUser({ navigation }) {
   return (
     <View style={loginStyles.container}>
+      {/* Background Image */}
+      <View style={loginStyles.background}>
+        <Image source={Background} style={loginStyles.backgroundImage} />
+      </View>
       <Header />
       <Text style={loginStyles.newUserText}>New Account</Text>
       <View style={loginStyles.input}>
@@ -37,11 +42,11 @@ export default function NewUser({ navigation }) {
 
       <View style={loginStyles.terms}>
         <TouchableOpacity style={loginStyles.terms} onPress={() => navigation.navigate("TermsOfUse")}>
-          <Text>Terms of Use</Text>
+          <Text style={loginStyles.textButtons2}>Terms of Use</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={loginStyles.terms} onPress={() => navigation.navigate("PrivacyPolicy")}>
-          <Text>Privacy Policy</Text>
+          <Text style={loginStyles.textButtons2}>Privacy Policy</Text>
         </TouchableOpacity>
         
       </View>

@@ -4,7 +4,9 @@ import { StatusBar } from "expo-status-bar";
 
 export default function DishSwiper( navigation ) {
     return (
-        <View></View>
+        <View>
+            
+        </View>
     );
   }
   

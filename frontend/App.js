@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { store } from "./redux/store";
 import { Provider } from "react-redux"
 import SelectDish from "./components/create-recipe/SelectDish";
+import Menu from "./components/Menu";
 
 //Create Navigation Stack
 const Stack = createNativeStackNavigator();
@@ -27,6 +28,8 @@ export default function App() {
             <Stack.Screen name="ResetPassword" component={ResetPassword} />
             <Stack.Screen name="SelectDish" component={SelectDish} />
             <Stack.Screen name="HomePage" component={HomePage} />
+            <Stack.Screen name="Menu" component={Menu} />
+
 
 
 

@@ -1,40 +1,38 @@
 import React from "react";
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  onPress,
-} from "react-native";
+import { Text, View, TouchableOpacity, onPress, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Header from "../Header"
-import { homeStyles } from "../styles";
-import DishSwiper from "./DishSwiper";
-
+import Header from "../Header";
+import { homeStyles, loginStyles, headerStyles } from "../styles";
+import Background from "../../assets/loginBG.png";
 
 export default function SelectDish({ navigation }) {
   return (
-    
     <View style={homeStyles.container}>
-        <Header />
+      {/* Background Image */}
+      <View style={loginStyles.background}>
+        <Image source={Background} style={loginStyles.backgroundImage} />
+      </View>
+      <Header />
+      {/* Menu Container */}
+      <View>
+        <TouchableOpacity
+          style={headerStyles.subContainer}
+          onPress={() => navigation.navigate("Menu")}
+        >
+          <Text style={headerStyles.text}>Username</Text>
+        </TouchableOpacity>
+      </View>
 
-    <View>
-    <DishSwiper />
-    </View>
-
-      <TouchableOpacity style={homeStyles.loginButton} onPress={onPress}>
+      <TouchableOpacity
+        style={homeStyles.button}
+        onPress={() => navigation.navigate("SelectDish")}
+      >
         <Text style={homeStyles.buttonText}>Create Recipe</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={homeStyles.loginButton} onPress={onPress}>
-        <Text style={homeStyles.buttonText}>Next</Text>
+      <TouchableOpacity style={homeStyles.button} onPress={onPress}>
+        <Text style={homeStyles.buttonText}>View Recipes</Text>
       </TouchableOpacity>
-      <View>
-      <Text
-            style={homeStyles.textButtons}
-            onPress={() => navigation.navigate("HomePage")}
-          >
-            Back
-          </Text>
-      </View>
+
       <StatusBar style="hidden" />
     </View>
   );

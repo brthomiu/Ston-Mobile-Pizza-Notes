@@ -2,10 +2,11 @@ import React from "react";
 import { Text, View, TouchableOpacity, onPress, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Header from "./Header";
-import { homeStyles, loginStyles, headerStyles } from "./styles";
+import { homeStyles } from "./styles";
+import { loginStyles } from "./styles";
 import Background from "../assets/loginBG.png";
 
-export default function HomePage({ navigation }) {
+export default function Menu({ navigation }) {
   return (
     <View style={homeStyles.container}>
       {/* Background Image */}
@@ -13,15 +14,7 @@ export default function HomePage({ navigation }) {
         <Image source={Background} style={loginStyles.backgroundImage} />
       </View>
       <Header />
-      {/* Menu Container */}
-      <View>
-        <TouchableOpacity
-          style={headerStyles.subContainer}
-          onPress={() => navigation.navigate("Menu")}
-        >
-          <Text style={headerStyles.text}>Username</Text>
-        </TouchableOpacity>
-      </View>
+      <SubHeader />
 
       <TouchableOpacity
         style={homeStyles.button}
