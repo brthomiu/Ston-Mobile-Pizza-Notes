@@ -1,4 +1,5 @@
 # Stön
+
 ### Mobile application for pizza chefs.
 
 Stön (stəʊn) is a platform built to help home cooks and chefs develop better pizzas.
@@ -18,5 +19,5 @@ Recipes are stored in the database, recipe data can be tracked down to each indi
 
 ## Frontend
 
-Frontend built with React Native and Expo. 
+Frontend built with React Native and Expo.
 Uses Oauth authentication for Google login and Redux Toolkit for state management.

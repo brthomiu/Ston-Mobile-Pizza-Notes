@@ -1,15 +1,14 @@
 import React from "react";
-import { termsStyles } from "./styles";
+import { termsStyles } from "../components/styles";
 import { Text, View, onPress, TouchableOpacity } from "react-native";
-import Header from "./Header";
+import Header from "../components/Header";
 
-export default function PrivacyPolicy({ navigation }) {
+export default function TermsOfUse({ navigation }) {
   return (
     <View style={termsStyles.container}>
       <Header />
       <Text style={termsStyles.text}>
-        You surrender any rights to privacy that are applicable in your locale
-        and agree to give me all of your data.
+        By creating an account you agree to pay me $1,000,000.
       </Text>
       <TouchableOpacity
         style={termsStyles.button}

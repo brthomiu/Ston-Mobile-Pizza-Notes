@@ -14,7 +14,6 @@ export default function Menu({ navigation }) {
         <Image source={Background} style={loginStyles.backgroundImage} />
       </View>
       <Header />
-      <SubHeader />
 
       <TouchableOpacity
         style={homeStyles.button}

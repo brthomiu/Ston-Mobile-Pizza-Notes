@@ -1,8 +1,8 @@
 import React from "react";
-import { loginStyles } from "./styles";
+import { loginStyles } from "../components/styles";
 import { Image, Text, View, TextInput, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Header from "./Header";
+import Header from "../components/Header";
 import Background from "../assets/loginBG.png";
 
 export default function NewUser({ navigation }) {
@@ -35,27 +35,33 @@ export default function NewUser({ navigation }) {
         />
       </View>
       <View style={loginStyles.buttonContainer}>
-        <TouchableOpacity style={loginStyles.createButton} onPress={() => navigation.navigate("HomePage")}>
+        <TouchableOpacity
+          style={loginStyles.createButton}
+          onPress={() => navigation.navigate("HomePage")}
+        >
           <Text style={loginStyles.buttonText}>Create Account</Text>
         </TouchableOpacity>
       </View>
 
       <View style={loginStyles.terms}>
-        <TouchableOpacity style={loginStyles.terms} onPress={() => navigation.navigate("TermsOfUse")}>
+        <TouchableOpacity
+          style={loginStyles.terms}
+          onPress={() => navigation.navigate("TermsOfUse")}
+        >
           <Text style={loginStyles.textButtons2}>Terms of Use</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={loginStyles.terms} onPress={() => navigation.navigate("PrivacyPolicy")}>
+        <TouchableOpacity
+          style={loginStyles.terms}
+          onPress={() => navigation.navigate("PrivacyPolicy")}
+        >
           <Text style={loginStyles.textButtons2}>Privacy Policy</Text>
         </TouchableOpacity>
-        
       </View>
-   
-        <TouchableOpacity onPress={() => navigation.navigate("Login")}>
-          <Text style={loginStyles.textButtons2}>Return to Login</Text>
-        </TouchableOpacity>
-      
 
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <Text style={loginStyles.textButtons2}>Return to Login</Text>
+      </TouchableOpacity>
 
       <StatusBar style="auto" />
     </View>

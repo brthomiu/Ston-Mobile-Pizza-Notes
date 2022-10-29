@@ -32,6 +32,11 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "package": "com.brthomiu.frontend"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "729ccac0-d28a-41a6-891f-337973eaf482"
+      }
     }
   }
 }

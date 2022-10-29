@@ -5,7 +5,7 @@ services:
   frontend: # Name of our service
     build: ./frontend # path to dockerfile
     ports: # Port binding to host from docker container
-      - "3000:3000" # Bind port 3000 of host to 3000 of container
+      - "19000:19000" # Bind port 3000 of host to 3000 of container
     container_name: frontend-docker
     restart: always # What to do if container crashes
     links:
@@ -23,9 +23,10 @@ services:
 
   db:
     image: postgres:14.5-alpine
+    restart: always
     environment:
-      - POSTGRES_PASSWORD=password_goes_here # Postgres Password
+      - POSTGRES_USER=username_goes_here
+      - POSTGRES_PASSWORD=password_goes_here
     ports:
       - "5432:5432"
     container_name: database-docker
-    restart: always

@@ -172,7 +172,6 @@ export const homeStyles = StyleSheet.create({
   textButtons: {
     color: color_white,
     fontSize: 16,
-
   },
   smallButton: {
     paddingVertical: 6,
@@ -180,8 +179,7 @@ export const homeStyles = StyleSheet.create({
     backgroundColor: color_dark,
     borderRadius: 10,
     top: "50%",
-
-  }
+  },
 });
 
 export const headerStyles = StyleSheet.create({
@@ -203,7 +201,6 @@ export const headerStyles = StyleSheet.create({
     color: color_white,
     fontSize: 16,
     textAlign: "center",
-
   },
 });
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, View, TouchableOpacity, onPress, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Header from "../Header";
-import { homeStyles, loginStyles, headerStyles } from "../styles";
-import Background from "../../assets/loginBG.png";
+import Header from "../components/Header";
+import { homeStyles, loginStyles, headerStyles } from "../components/styles";
+import Background from "../assets/loginBG.png";
 
-export default function SelectDish({ navigation }) {
+export default function HomePage({ navigation }) {
   return (
     <View style={homeStyles.container}>
       {/* Background Image */}
