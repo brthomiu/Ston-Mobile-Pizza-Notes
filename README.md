@@ -1,4 +1,4 @@
-# Stön
+# Stön Pizza Notes - Mobile Edition
 
 ### Mobile application for pizza chefs.
 
